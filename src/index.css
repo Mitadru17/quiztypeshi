@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-neutral-800 bg-neutral-50;
+  }
+
+  h1 {
+    @apply text-4xl font-bold text-neutral-900;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold text-neutral-900;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold text-neutral-900;
+  }
+
+  h4 {
+    @apply text-xl font-semibold text-neutral-900;
+  }
+
+  p {
+    @apply text-neutral-700 leading-relaxed;
+  }
+
+  a {
+    @apply text-primary-600 hover:text-primary-700 transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-full font-medium transition-all duration-200 shadow-soft-sm hover:shadow-soft-md;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary-600 text-white hover:bg-primary-700;
+  }
+
+  .btn-secondary {
+    @apply btn bg-secondary-100 text-secondary-700 hover:bg-secondary-200;
+  }
+
+  .btn-accent {
+    @apply btn bg-accent-600 text-white hover:bg-accent-700;
+  }
+
+  .btn-success {
+    @apply btn bg-success-600 text-white hover:bg-success-700;
+  }
+
+  .btn-warning {
+    @apply btn bg-warning-50 text-warning-700 hover:bg-warning-100;
+  }
+
+  .btn-error {
+    @apply btn bg-error-50 text-error-600 hover:bg-error-100;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 rounded-lg border border-neutral-200 focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-soft-lg border border-neutral-100/50 p-6;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-primary {
+    @apply badge bg-primary-50 text-primary-700;
+  }
+
+  .badge-success {
+    @apply badge bg-success-50 text-success-700;
+  }
+
+  .badge-warning {
+    @apply badge bg-warning-50 text-warning-700;
+  }
+
+  .badge-error {
+    @apply badge bg-error-50 text-error-700;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-300 rounded-full hover:bg-neutral-400 transition-colors;
+}
